@@ -18,7 +18,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './public/bundle.js',
+    filename: './public/bundle.js'
   },
   resolve: {
     root: __dirname,
@@ -28,8 +28,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
-      applicationStyles: 'app/styles/app.scss',
-      jQuery: 'node_modules/jquery/dist/jquery.min.js'
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -37,8 +36,7 @@ module.exports = {
     loaders: [{
       loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015', 'stage-0'],
-        compact: false
+        presets: ['react', 'es2015', 'stage-0']
       },
       test: /\.jsx?$/,
       exclude: /(node_modules | bower_components)/
