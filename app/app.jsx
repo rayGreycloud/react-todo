@@ -10,23 +10,25 @@ import router from 'app/router/';
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
+    store.dispatch(actions.login(user.uid));
     hashHistory.push('/todos');
   } else {
+    store.dispatch(actions.logout());
     hashHistory.push('/');
   }
 });
 
 store.dispatch(actions.startAddTodos());
 
-// load foundation
+// Load foundation
 $(document).foundation();
 
-// app css
+// App css
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
   <Provider store={store}>
     {router}
   </Provider>,
-  document.getElementById("app")
+  document.getElementById('app')
 );
