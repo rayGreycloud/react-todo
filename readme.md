@@ -1,1 +1,3 @@
-React Timer Application
+React Todos Application
+USES DEPRECIATED VERSION OF REACT 
+DO NOT USE
